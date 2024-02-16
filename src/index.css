@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply w-[456px] font-sans text-lg;
+  }
+
+  * {
+    @apply select-none;
+
+    &::-webkit-scrollbar {
+      @apply h-2 w-2 bg-transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply bg-hcmus-bg/70;
+    }
+  }
+}
+
+@layer components {
+  .divider {
+    @apply relative m-auto mt-2 h-[2px] w-1/2 bg-hcmus-fg;
+  }
+
+  .input-wrapper {
+    @apply relative flex items-center gap-3;
+
+    label {
+      @apply relative flex-1 self-start text-right font-semibold;
+    }
+    label + .input-container {
+      @apply flexcentercol flex-auto gap-3;
+    }
+
+    .input-container {
+      .input-with-remove {
+        @apply relative w-full;
+
+        .input-remove-btn {
+          @apply flexcenter absolute -right-8 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full border-2 border-red-500 bg-gray-300 text-center text-xs;
+        }
+      }
+
+      input {
+        @apply w-full;
+
+        &[data-main-link] {
+          @apply bg-hcmus-fg text-white;
+        }
+      }
+    }
+
+    input {
+      @apply flex-auto rounded-md border-2 border-transparent px-2 py-1 outline-none transition-colors focus:border-hcmus-fg;
+    }
+  }
+
+  .form {
+    &-checkbox {
+      @apply inline-block h-4 w-4 appearance-auto rounded border-2 border-gray-400 bg-gray-100 align-middle text-blue-600 focus:ring-2 focus:ring-blue-500;
+    }
+  }
+
+  label.is-beta span {
+    @apply relative inline-block after:absolute after:-bottom-1 after:-right-5 after:h-4 after:w-8 after:text-xs after:font-semibold after:text-hcmus-fg after:content-["Beta"];
+  }
+}
+
+@layer utilities {
+  .flexcenter {
+    @apply flex items-center justify-center;
+  }
+  .flexcentercol {
+    @apply flexcenter flex-col;
+  }
+}

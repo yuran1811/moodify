@@ -1,0 +1,7 @@
+{
+  "typeAcquisition": {
+    "include": ["chrome"]
+  },
+  "include": ["**/*.js", "**/*.min.js"],
+  "exclude": ["node_modules"]
+}

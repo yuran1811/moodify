@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../public/static/js/jquery.min.js"></script>
+    <script src="../public/static/js/alpinejs.min.js" defer></script>
+    <script src="../public/static/js/src/popup.js" defer></script>
+    <link rel="stylesheet" href="../public/static/css/index.css" />
+    <title>Moodify Settings</title>
+  </head>
+  <body>
+    <main
+      class="container flex flex-col justify-center gap-2 overflow-y-auto overflow-x-hidden bg-slate-200 px-12 py-4 text-hcmus-fg"
+    >
+      <h1 class="text-center text-2xl font-bold">Moodify</h1>
+
+      <div class="divider"></div>
+      <div class="container flex flex-col justify-center gap-2">
+        <div class="input-wrapper">
+          <label>
+            Moodle link
+            <span
+              class="add-new flexcenter absolute -bottom-5 left-1/2 h-4 w-4 -translate-y-1/2 cursor-pointer rounded-full bg-hcmus-fg text-white"
+            >
+              +
+            </span>
+          </label>
+          <div class="input-container">
+            <div class="input-with-remove">
+              <input
+                data-collect
+                id="moodleLink"
+                type="text"
+                placeholder="Type your Moodle link"
+                value="https://courses.ctda.hcmus.edu.vn"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label>Username</label>
+          <input data-collect id="username" type="text" placeholder="Username" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="password">Password</label>
+          <input
+            data-collect
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+
+        <button
+          class="self-center rounded-xl bg-hcmus-bg bg-opacity-80 px-4 py-2 text-white transition-colors hover:bg-opacity-100"
+          role="loginButton"
+        >
+          Sign in
+        </button>
+      </div>
+
+      <div class="divider"></div>
+      <p class="text-center text-xl font-semibold">Logs</p>
+      <div class="flexcentercol gap-2">
+        <input
+          data-collect
+          id="token"
+          class="p-2 ring-1 ring-lime-200"
+          type="hidden"
+          placeholder="Token"
+        />
+        <div
+          class="border-1 min-h-24 w-full select-text rounded border-green-300 p-2 text-xs ring-1"
+          role="editableLog"
+        ></div>
+      </div>
+
+      <div class="divider"></div>
+      <p class="text-center text-xl font-semibold">Features</p>
+      <p class="text-md text-center">Refresh to apply</p>
+      <div class="grid grid-flow-row grid-cols-2">
+        <label class="flex items-center gap-2">
+          <input
+            data-collect
+            id="autoLogin"
+            type="checkbox"
+            class="form-checkbox"
+          />
+          <span>Auto login</span>
+        </label>
+        <label class="flex items-center gap-2">
+          <input
+            data-collect
+            id="quickBrowse"
+            type="checkbox"
+            class="form-checkbox"
+          />
+          <span>Quick browse courses</span>
+        </label>
+        <label class="is-beta flex items-center gap-2">
+          <input
+            data-collect
+            id="courseSplitView"
+            type="checkbox"
+            class="form-checkbox"
+          />
+          <span>Course Split View</span>
+        </label>
+        <label class="is-beta flex items-center gap-2">
+          <input
+            data-collect
+            id="facebookIntegrate"
+            type="checkbox"
+            class="form-checkbox"
+          />
+          <span>Facebook Integrate</span>
+        </label>
+      </div>
+    </main>
+  </body>
+</html>

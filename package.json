@@ -1,0 +1,23 @@
+{
+  "name": "moodify",
+  "description": "HCMUS Moodle Enhancer",
+  "author": "yuran1811",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "tw": "npx tailwindcss -i ./src/index.css -o ./public/static/css/index.css -m --postcss",
+    "tw:w": "yarn tw -w",
+    "swc": "npx swc ./src -d ./public/static/js -C minify=true -C jsc.minify.format.comments=false",
+    "swc:w": "yarn swc -w",
+    "build": "yarn tw && yarn swc"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.9",
+    "@swc/core": "^1.4.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1"
+  }
+}

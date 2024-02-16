@@ -1,0 +1,7 @@
+.vscode
+.vscode/*
+
+node_modules
+
+public/static/css*
+public/static/js/src*

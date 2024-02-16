@@ -1,0 +1,59 @@
+{
+  "name": "Moodify",
+  "description": "",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Moodle Settings",
+    "default_popup": "src/popup.html?newtab",
+    "default_icon": "./public/images/moodle-icon.jpg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://courses.hcmus.edu.vn/*",
+        "https://courses.ctda.hcmus.edu.vn/*",
+        "https://portal.ctdb.hcmus.edu.vn/Login*"
+      ],
+      "js": [
+        "public/static/js/jquery.min.js",
+        "public/static/js/src/pages/each.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://courses.hcmus.edu.vn/login/index.php*",
+        "https://courses.ctda.hcmus.edu.vn/login/index.php*",
+        "https://portal.ctdb.hcmus.edu.vn/Login*"
+      ],
+      "js": ["public/static/js/src/main.js"]
+    },
+    {
+      "matches": [
+        "https://courses.hcmus.edu.vn/course/view.php?id=*",
+        "https://courses.ctda.hcmus.edu.vn/my*",
+        "https://courses.ctda.hcmus.edu.vn/user*",
+        "https://courses.ctda.hcmus.edu.vn/grade*",
+        "https://courses.ctda.hcmus.edu.vn/admin*",
+        "https://courses.ctda.hcmus.edu.vn/course/view.php?id=*"
+      ],
+      "js": ["public/static/js/src/pages/courses.js"]
+    },
+    {
+      "matches": [
+        "https://courses.hcmus.edu.vn/",
+        "https://courses.hcmus.edu.vn/?*",
+        "https://courses.ctda.hcmus.edu.vn/",
+        "https://courses.ctda.hcmus.edu.vn/?*"
+      ],
+      "js": ["public/static/js/src/pages/home.js"]
+    },
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": [
+        "public/static/js/src/facebook/injected.js"
+      ]
+    }
+  ]
+}
