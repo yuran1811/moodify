@@ -2,9 +2,9 @@
 
 ### Features
 
-- [x] Tự động đăng nhập Moodle
-- [ ] Giao diện trang môn học dễ sử dụng hơn
-- [x] Đính deadline moodle lên facebook, để vừa lướt fb vừa theo dõi deadline
+- [x] Tự động đăng nhập Moodle, Portal (nếu dùng chung tài khoản và mật khẩu)
+- [x] Giao diện trang môn học dễ sử dụng
+- [x] Vừa lướt facebook vừa theo dõi deadline
 
 ### Trang hỗ trợ:
 
@@ -23,18 +23,15 @@
 
 #### Giao diện trang môn học
 
-![course](/public/images/course.png)
-
 #### Facebook
-
-![fb](/public/images/fb.png)
 
 ### Installation
 
-- Truy cập [chrome://extensions/](chrome://extensions/) và chọn `Load unpacked extension...`.
+- Truy cập [chrome://extensions/](chrome://extensions/) và chọn `Load unpacked extension`.
 - Chọn thư mục vừa giải nén.
-- Sau đó bạn có thể chỉnh sửa thiết lập extension bằng cách click vào icon trên taskbar.
+- Có thể cài đặt extension bằng cách click vào icon trên thanh extension.
 
 ### References
 
+- Thanks to this [codebase](https://github.com/tinwritescode/hcmus-moodle-improved) and [Noboroto Fork Version](https://github.com/Noboroto/hcmus-moodle-improved), I've create this with a bunch of new features and improvements.
 - [CSP](https://content-security-policy.com/)
