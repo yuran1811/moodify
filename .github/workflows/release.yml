@@ -27,14 +27,20 @@ jobs:
       - name: Zip Folder
         run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" ".gitignore" ".prettierignore" ".prettierrc" "*.config.js" "yarn.lock" "node_modules/*" "src/facebook/*" "src/pages/*"
 
+      - name: Generate release tag
+        id: generate_release_tag
+        uses: alexvingg/next-release-tag@v1.0.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Draft Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: experiment
-          release_name: v1.0.0
+          tag_name: ${{ steps.generate_release_tag.outputs.release_tag }}
+          release_name: Release ${{ steps.generate_release_tag.outputs.release_tag }}
           draft: true
           prerelease: false
 
