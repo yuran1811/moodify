@@ -7,21 +7,14 @@ on:
 
 jobs:
   publish:
-    permissions:
-      contents: write
-
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Zip Folder
-        run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" ".gitignore" ".prettierignore" ".prettierrc" "*.config.js" "yarn.lock" "node_modules"
+        run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" ".gitignore" ".prettierignore" ".prettierrc" "*.config.js" "yarn.lock" "node_modules/*"
 
       - name: Release
         uses: softprops/action-gh-release@v1

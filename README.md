@@ -27,7 +27,7 @@
 
 ### Installation
 
-- Truy cập [chrome://extensions/](chrome://extensions/) và chọn `Load unpacked extension`.
+- Truy cập [chrome://extensions/](chrome://extensions/) và chọn `Load unpacked`.
 - Chọn thư mục vừa giải nén.
 - Có thể cài đặt extension bằng cách click vào icon trên thanh extension.
 
