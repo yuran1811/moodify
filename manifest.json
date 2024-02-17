@@ -7,7 +7,7 @@
   "action": {
     "default_title": "Moodle Settings",
     "default_popup": "src/popup.html?newtab",
-    "default_icon": "./public/images/moodle-icon.jpg"
+    "default_icon": "./public/static/images/moodle-icon.jpg"
   },
   "content_scripts": [
     {

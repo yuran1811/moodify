@@ -25,7 +25,7 @@ jobs:
           yarn build
 
       - name: Zip Folder
-        run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" ".gitignore" ".prettierignore" ".prettierrc" "*.config.js" "yarn.lock" "node_modules/*" "src/facebook/*" "src/pages/*"
+        run: zip -9 -r ${{ github.event.repository.name }}.zip . -i "public/static/*" "src/main.js" "src/popup.js" "src/*.html" "manifest.json"
 
       - name: Generate release tag
         id: generate_release_tag
