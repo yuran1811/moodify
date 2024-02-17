@@ -14,8 +14,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build project
+        run: |
+          yarn
+          yarn build
+
       - name: Zip Folder
-        run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" ".gitignore" ".prettierignore" ".prettierrc" "*.config.js" "yarn.lock" "node_modules/*"
+        run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" ".gitignore" ".prettierignore" ".prettierrc" "*.config.js" "yarn.lock" "node_modules/*" "src/facebook/*" "src/pages/*"
 
       - name: Create Draft Release
         id: create_release
