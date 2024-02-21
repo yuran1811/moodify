@@ -135,6 +135,9 @@ async function onLoginButtonClick() {
 
 (() => {
   $(document).on("change", saveOnChange).on("input", saveOnChange);
+  $("input[data-signin-info]").on("keypress", function (e) {
+    if (e.key === "Enter") onLoginButtonClick();
+  });
 
   loadFromStorage();
   loginButton.on("click", onLoginButtonClick);
