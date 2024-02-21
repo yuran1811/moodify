@@ -22,12 +22,19 @@
 - [x] Course page improvements
 - [x] Watching moodle events on Facebook
 
+#### Upcoming Features
+
+- Watching moodle events on any provided sites
+
+### Todos
+
 - [ ] Add last-access time for courses and reminds if over 12hrs + Moodle link
 - [ ] Add `ignore` function for events + watch for the submit status
 - [ ] Add submit link for tasks
 - [ ] Add notification badge for moodle icon
 - [ ] Add scrollbar for popup logs
 - [ ] Add popup options for Moodle page restyle
+- [ ] Add auto login time input
 
 - [ ] Tabs layout for watch event (mark, unmark)
 - [ ] Sort events due date in fb integration
@@ -35,8 +42,6 @@
 - [ ] Extend the watch features for other sites
 
 - [ ] Drop shadow for events popup
-- [ ] Fix auto close notif (5s) and style max-width: 320
-- [ ] Fix auto login countdown
 
 ### Supported sites
 
@@ -77,13 +82,11 @@
 ### Installation
 
 - Download the latest release [zip](https://github.com/yuran1811/moodify/releases).
-- Unzip the file to `/moddify` folder.
-- Goto [chrome://extensions/](chrome://extensions/).
+- Unzip the file to `/moodify` folder.
+- Goto [`chrome://extensions/`](chrome://extensions/).
 - Click `Load unpacked` and choose the `/moodify` folder or drag and drop the folder to `chrome://extensions/`.
 - Extension is available now!
 
 ### References
 
-- Many thanks to [original codebase](https://github.com/tinwritescode/hcmus-moodle-improved) and [Noboroto Fork Version](https://github.com/Noboroto/hcmus-moodle-improved), I've create this with a bunch of new features and improvements.
-
-- [CSP](https://content-security-policy.com/)
+- Many thanks to this [inspired repo](https://github.com/tinwritescode/hcmus-moodle-improved) and [Noboroto's Fork](https://github.com/Noboroto/hcmus-moodle-improved), I've create this with a bunch of new features and improvements.
