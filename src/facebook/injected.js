@@ -183,7 +183,7 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
   setTimeout(async function () {
     setTimeout(() => {
       updateData();
-    }, 1000);
+    }, 500);
 
     const target = document.querySelectorAll(`[role="navigation"]`)[1];
     const element = target.children[1];

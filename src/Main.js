@@ -1,12 +1,7 @@
-const AUTO_LOGIN_TIME = 2500;
-const TOAST_TIME = 5000;
+const DEFAULT_AUTO_LOGIN_TIME = 2000;
+const DEFAULT_TOAST_TIME = 5000;
 
-const notifyTemplate = ({
-  title = "Moodify Notification",
-  message,
-  timeoutMessage,
-  timeout = TOAST_TIME,
-}) => `
+const notifyTemplate = ({ title, message, timeoutMessage, timeout }) => `
   <div id="moodify-notify">
     ${title ? `<p class="moodify-notify__title">${title}</p>` : ""}
     ${message ? `<p class="moodify-notify__message">${message}</p>` : ""}
@@ -14,10 +9,20 @@ const notifyTemplate = ({
   </div>
 `;
 
-function notify(notifyObj) {
-  let { timeout } = notifyObj;
-
-  $("body").append(notifyTemplate(notifyObj));
+function notify({
+  title = "Moodify Notification",
+  message,
+  timeoutMessage,
+  timeout = DEFAULT_TOAST_TIME,
+}) {
+  $("body").append(
+    notifyTemplate({
+      title,
+      message,
+      timeoutMessage,
+      timeout,
+    }),
+  );
 
   let intervalId = setInterval(() => {
     timeout -= 1000;
@@ -27,7 +32,14 @@ function notify(notifyObj) {
       return;
     }
 
-    $("#moodify-notify > p + p").html(notifyTemplate({ ...notifyObj, timeout }));
+    $("#moodify-notify > p + p").html(
+      notifyTemplate({
+        title,
+        message,
+        timeoutMessage,
+        timeout,
+      }),
+    );
   }, 1000);
 }
 
@@ -42,18 +54,19 @@ function injectCustomStyle() {
         position: fixed;
         right: 70px;
         top: 70px;
-        z-index: 50;
-        background-color: #fff;
-        color: #656565;
+        max-width: 320px;
         padding: 0.5rem 1.2rem;
+        z-index: 50;
+        color: #656565;
+        background-color: #fff;
         font-weight: bold;
+        border: 4px solid #656565;
         border-radius: 12px;
         display: flex;
+        gap: 8px;
         flex-direction: column;
         justify-items: center;
         align-items: center;
-        gap: 8px;
-        border: 4px solid #656565;
       }
 
       .moodify-notify__title {
@@ -117,7 +130,7 @@ chrome.storage.sync.get(["autoLogin"], (data) => {
       notify({
         message: "Tính năng tự động đăng nhập đang bật",
         timeoutMessage: `Tự động đăng nhập sau `,
-        timeout: AUTO_LOGIN_TIME,
+        timeout: DEFAULT_AUTO_LOGIN_TIME,
       });
 
     $("#loginbtn").hide();
@@ -138,6 +151,6 @@ chrome.storage.sync.get(["autoLogin"], (data) => {
           $("#login")[0].submit();
         }
       }
-    }, AUTO_LOGIN_TIME);
+    }, DEFAULT_AUTO_LOGIN_TIME);
   });
 });
