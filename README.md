@@ -22,20 +22,21 @@
 - [x] Course page improvements
 - [x] Watching moodle events on Facebook
 
-- [ ] Add last access time for courses and remind if over 12hrs + Moodle link
-- [ ] Add ignore function for events + watch for the submit status
+- [ ] Add last-access time for courses and reminds if over 12hrs + Moodle link
+- [ ] Add `ignore` function for events + watch for the submit status
 - [ ] Add submit link for tasks
 - [ ] Add notification badge for moodle icon
+- [ ] Add scrollbar for popup logs
+- [ ] Add popup options for Moodle page restyle
 
 - [ ] Tabs layout for watch event (mark, unmark)
 - [ ] Sort events due date in fb integration
 - [ ] Right click to add watch events
 - [ ] Extend the watch features for other sites
 
-- [ ] Fix auto close notif (5s) and style max-width: 320
-- [ ] add scroll for popup logs
 - [ ] Drop shadow for events popup
-- [ ] Auto login countdown
+- [ ] Fix auto close notif (5s) and style max-width: 320
+- [ ] Fix auto login countdown
 
 ### Supported sites
 
@@ -45,20 +46,31 @@
 
 ### Screenshot
 
-#### Auto Signin
+#### Auto Sign In
 
-![popup image](/public/screenshots/popup.jpg)
-![not-set](/public/screenshots/not-set.jpg)
-![login-set](/public/screenshots/set.jpg)
-![wrong-login](/public/screenshots/wrong-login.jpg)
+##### Popup
 
-#### Course Page
+| Popup Image 1                                        | Popup Image 2                                        |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| ![popup image 1](public/screenshots/extension-1.png) | ![popup image 2](public/screenshots/extension-2.png) |
 
-| Before                                    | After                                   |
-| ----------------------------------------- | --------------------------------------- |
-| ![before](/public/screenshots/before.jpg) | ![after](/public/screenshots/after.jpg) |
+##### Extension Active Status
+
+![login-set](public/screenshots/auto-login.png)
+![not-set](public/screenshots/not-enable-auto-login.png)
+
+#### Moodle Page Modifications
+
+|                    | Before                                               | After                                                        |
+| ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Navigation Bar     | ![before](public/screenshots/nav-bar.png)            | ![after](public/screenshots/original/nav-bar.png)            |
+| Home Page          | ![before](public/screenshots/home-page.png)          | ![after](public/screenshots/original/home-page.png)          |
+| Courses Page       | ![before](public/screenshots/my-courses-page.png)    | ![after](public/screenshots/original/my-courses-page.png)    |
+| Course Detail Page | ![before](public/screenshots/course-detail-page.png) | ![after](public/screenshots/original/course-detail-page.png) |
 
 #### Facebook Integration
+
+![facebook-integrate](public/screenshots/facebook-integrate.png)
 
 ---
 
