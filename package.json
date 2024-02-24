@@ -11,6 +11,7 @@
     "swc:w": "yarn swc -w",
     "build": "yarn tw && yarn swc",
     "zip": "zip -9 -r moodify.zip . -i \"public/static/*\" \"src/*.html\" \"manifest.json\"",
+    "clean": "rm -rf public/static/css public/static/js/src moodify.zip",
     "test:release": "yarn build && yarn zip"
   },
   "devDependencies": {
