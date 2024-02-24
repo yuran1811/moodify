@@ -10,7 +10,8 @@
     "swc": "npx swc ./src -d ./public/static/js -C minify=true -C jsc.minify.format.comments=false",
     "swc:w": "yarn swc -w",
     "build": "yarn tw && yarn swc",
-    "test:release": "yarn build && zip -9 -r moodify.zip . -i \"public/static/*\" \"src/*.html\" \"manifest.json\""
+    "zip": "zip -9 -r moodify.zip . -i \"public/static/*\" \"src/*.html\" \"manifest.json\"",
+    "test:release": "yarn build && yarn zip"
   },
   "devDependencies": {
     "@swc/cli": "^0.3.9",
