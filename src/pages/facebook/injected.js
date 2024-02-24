@@ -1,8 +1,10 @@
+const DEFAULT_UPDATE_INTERVAL = 10;
+
 function injectCustomStyle() {
   const style = document.createElement("style");
   style.textContent = `<style>/*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:initial}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:initial;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:initial}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}
-    menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,::backdrop,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }#moodify-root{position:absolute;right:16px;top:0;max-height:calc(100vh - var(--header-height));width:365px;border-radius:8px;background-color:var(--card-background);--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}#moodify-root ::-webkit-scrollbar{height:7px;width:7px;background-color:initial}#moodify-root ::-webkit-scrollbar-thumb{border-radius:4px;--tw-bg-opacity:1;background-color:rgb(148 163 184/var(--tw-bg-opacity))}#moodify-root #moodify-header p{margin:20px 16px 12px;text-align:center;font-size:1.2rem;font-weight:700}
-    #moodify-root #moodify-content{margin-left:16px;margin-right:16px;height:max-content;max-height:calc(100vh - 145px - var(--header-height));overflow:hidden;padding-bottom:12px;padding-top:20px}#moodify-root #moodify-content #moodify-event-list{display:flex;height:100%;flex-direction:column;align-items:flex-start;justify-content:flex-start}#moodify-root #moodify-content #moodify-event-list>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(20px*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(20px*var(--tw-space-y-reverse))}#moodify-root #moodify-content #moodify-event-list{overflow-y:auto;overflow-x:hidden}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .moodify-event-item-title{font-size:1rem;font-weight:700}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .time-wrapper{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .time-wrapper .moodify-event-item-date,#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .time-wrapper .moodify-event-item-timeremain{font-size:.8125rem}#moodify-root #moodify-content #moodify-event-list .moodify-event-item a{display:inline-block}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-body .moodify-event-item-description{font-size:.85rem;font-weight:600}.-ml-1{margin-left:-.25rem}.mr-3{margin-right:.75rem}.inline-flex{display:inline-flex}.h-5{height:1.25rem}.w-5{width:1.25rem}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin{animation:spin 1s linear infinite}.cursor-not-allowed{cursor:not-allowed}.items-center{align-items:center}.rounded-md{border-radius:.375rem}
+    menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,::backdrop,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }#moodify-root{filter:drop-shadow(0 0 0.4rem var(--fds-black-alpha-80));position:absolute;right:16px;top:0;max-height:calc(100vh - var(--header-height));width:365px;border-radius:8px;background-color:var(--card-background);--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}#moodify-root ::-webkit-scrollbar{height:7px;width:7px;background-color:initial}#moodify-root ::-webkit-scrollbar-thumb{border-radius:4px;--tw-bg-opacity:1;background-color:rgb(148 163 184/var(--tw-bg-opacity))}#moodify-root #moodify-header p{margin:20px 16px 12px;text-align:center;font-size:1.2rem;font-weight:700}
+    #moodify-root #moodify-content{margin-left:16px;margin-right:16px;height:max-content;max-height:calc(100vh - 145px - var(--header-height));overflow:hidden;padding-bottom:12px;padding-top:20px}#moodify-root #moodify-content #moodify-event-list{display:flex;height:100%;flex-direction:column;align-items:flex-start;justify-content:flex-start}#moodify-root #moodify-content #moodify-event-list>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(20px*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(20px*var(--tw-space-y-reverse))}#moodify-root #moodify-content #moodify-event-list{overflow-y:auto;overflow-x:hidden}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .moodify-event-item-title{font-size:1rem;font-weight:700}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .time-wrapper{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .time-wrapper .moodify-event-item-date,#moodify-root #moodify-content #moodify-event-list .moodify-event-item-header .time-wrapper .moodify-event-item-timeremain{font-size:.8125rem}#moodify-root #moodify-content #moodify-event-list .moodify-event-item a{display:inline-block}#moodify-root #moodify-content #moodify-event-list .moodify-event-item-body .moodify-event-item-description{font-size:.85rem;font-weight:600}.-ml-1{margin-left:-.25rem}.mr-3{margin-right:.75rem}.inline-flex{display:inline-flex}.h-5{height:1.25rem}.w-5{width:1.25rem}@keyframes ping{75%,to{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0,0,.2,1) infinite}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin{animation:spin 1s linear infinite}.cursor-not-allowed{cursor:not-allowed}.items-center{align-items:center}.rounded-md{border-radius:.375rem}
     .bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.opacity-25{opacity:.25}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150,.transition{transition-duration:.15s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.hover\:bg-indigo-400:hover{--tw-bg-opacity:1;background-color:rgb(129 140 248/var(--tw-bg-opacity))}</style>`;
 
   document.head.appendChild(style);
@@ -88,6 +90,12 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
     const headerHeight = document.querySelector("#moodify-header").clientHeight;
     document.querySelector("#moodify-content").style["max-height"] =
       `calc(100vh - ${headerHeight}px - var(--header-height))`;
+
+    data.sort((a, b) => {
+      const dateA = new Date(a.eventTime);
+      const dateB = new Date(b.eventTime);
+      return dateB - dateA;
+    });
 
     const items = [...data].map((item) => {
       return `
@@ -177,20 +185,86 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
     });
   };
 
-  setInterval(updateData, 15 * 1000);
-
   // Add Moodle Icon to Facebook navigation bar
   setTimeout(async function () {
     setTimeout(() => {
       updateData();
-    }, 500);
+    }, 200);
 
+    setInterval(updateData, 1000 * DEFAULT_UPDATE_INTERVAL);
+
+    const nowTimeUpdate = () => {
+      const popup = document.querySelector(`[role="moodle-popup"`);
+
+      let nowTimeDisplayId = null;
+      if (popup.style.display !== "none") {
+        nowTimeDisplayId = setInterval(() => {
+          document.querySelector("#now-time-display").innerHTML =
+            `${new Date().toLocaleString()}`;
+        }, 1000);
+      } else {
+        clearInterval(nowTimeDisplayId);
+        nowTimeDisplayId = null;
+      }
+    };
+
+    const updateIconState = (cloneElement) => {
+      const popup = document.querySelector(`[role="moodle-popup"`);
+      popup.style.display = ["none", "block"].at(popup.style.display === "none");
+
+      cloneElement
+        .querySelector("svg")
+        .setAttribute(
+          "style",
+          popup.style.display === "block"
+            ? "--color: var(--accent)"
+            : "--color: var(--primary-icon)",
+        );
+
+      Object.assign(cloneElement.querySelector("div[role=button]").style, {
+        "background-color":
+          popup.style.display === "block"
+            ? "var(--primary-deemphasized-button-background)"
+            : "var(--secondary-button-background)",
+        "border-radius": "100%",
+      });
+    };
+
+    // Clone Facebook Icon Element
     const target = document.querySelectorAll(`[role="navigation"]`)[1];
     const element = target.children[1];
     const cloneElement = element.cloneNode(true);
 
     target.appendChild(cloneElement);
 
+    // Icon Div
+    cloneElement.querySelector("div").setAttribute("role", "button");
+    cloneElement.querySelector("div").style.position = "relative";
+
+    // Notif badge
+    const notifBadge = document.createElement("div");
+    notifBadge.setAttribute("role", "status-badge");
+    notifBadge.setAttribute("aria-label", "Moodle Notification Badge");
+    Object.assign(notifBadge.style, {
+      position: "absolute",
+      top: "0",
+      right: "0",
+      width: "12px",
+      height: "12px",
+      "z-index": "999",
+      backgroundColor: "var(--accent)",
+      "border-radius": "100%",
+    });
+
+    const notifBadgeClone = notifBadge.cloneNode(true);
+
+    notifBadge.setAttribute("class", "absolute animate-ping");
+    cloneElement.querySelector("div").appendChild(notifBadge);
+
+    notifBadgeClone.setAttribute("class", "absolute");
+    cloneElement.querySelector("div").appendChild(notifBadgeClone);
+
+    // Moodle SVG
     const svg = cloneElement.querySelector("svg");
     const newSvg = svg.cloneNode(true);
     newSvg.setAttribute("viewBox", "1 8 20 10");
@@ -204,26 +278,9 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
         stroke-linejoin="round"
         stroke-width="2"
         d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-      />
-    `;
+      />`;
 
     svg.parentNode.replaceChild(newSvg, svg);
-
-    const nowTimeUpdate = (popup) => {
-      let nowTimeDisplayId = null;
-      if (popup.style.display !== "none") {
-        nowTimeDisplayId = setInterval(() => {
-          document.querySelector("#now-time-display").innerHTML =
-            `${new Date().toLocaleString()}`;
-        }, 1000);
-      } else {
-        clearInterval(nowTimeDisplayId);
-        nowTimeDisplayId = null;
-      }
-    };
-
-    createPopup(cloneElement);
-    nowTimeUpdate(document.querySelector(`[role="moodle-popup"`));
 
     // Moodle Icon Handler
     const link = cloneElement.querySelector(`[role="link"]`);
@@ -234,10 +291,14 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
       updateData();
       updatePopup();
 
-      const popup = document.querySelector(`[role="moodle-popup"`);
-      popup.style.display = ["none", "block"].at(popup.style.display === "none");
+      updateIconState(cloneElement);
 
-      nowTimeUpdate(popup);
+      nowTimeUpdate();
     });
+
+    createPopup(cloneElement);
+    updateIconState(cloneElement);
+
+    nowTimeUpdate(document.querySelector(`[role="moodle-popup"`));
   }, 2000);
 });
