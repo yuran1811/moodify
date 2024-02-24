@@ -20,6 +20,9 @@
 
 - [x] Auto signin to Moodle, Portal sites (if use the same account info)
 - [x] Course page improvements
+  - `Course Plit View` feature
+  - `Courses Quick Browse` feature
+  - Pages restyling
 - [x] Watching moodle events on Facebook
 
 #### Upcoming Features
@@ -28,20 +31,19 @@
 
 ### Todos
 
-- [ ] Add last-access time for courses and reminds if over 12hrs + Moodle link
-- [ ] Add `ignore` function for events + watch for the submit status
-- [ ] Add submit link for tasks
-- [ ] Add notification badge for moodle icon
-- [ ] Add scrollbar for popup logs
-- [ ] Add popup options for Moodle page restyle
-- [ ] Add auto login time input
+- [ ] Feat: Add submit link for tasks
+- [ ] Feat: Add last-access time for courses and reminds if over 12hrs + Moodle link
+- [ ] Feat: Add `ignore` function for events + watch for the submit status
+- [ ] Feat: Add scrollbar for popup logs
+- [ ] Feat: Add popup options for Moodle page restyle
+- [ ] Feat: Add auto login time input
+- [ ] Feat: Right click to add watch events
+- [ ] Feat: Extend the watch features for other sites
+- [ ] Feat: Pernamently store the logs
 
-- [ ] Tabs layout for watch event (mark, unmark)
-- [ ] Sort events due date in fb integration
-- [ ] Right click to add watch events
-- [ ] Extend the watch features for other sites
-
-- [ ] Drop shadow for events popup
+- [ ] Style: Tabs layout for watch event (mark, unmark)
+- [ ] Style: Sort logs by time
+- [ ] Style: Add loading spinner for popup signin process
 
 ### Supported sites
 
