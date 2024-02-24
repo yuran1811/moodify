@@ -51,9 +51,7 @@
     },
     {
       "matches": ["https://*.facebook.com/*"],
-      "js": [
-        "public/static/js/src/facebook/injected.js"
-      ]
+      "js": ["public/static/js/src/pages/facebook/injected.js"]
     }
   ]
 }
