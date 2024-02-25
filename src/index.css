@@ -20,6 +20,10 @@
 }
 
 @layer components {
+  div[role="editableLog"] {
+    @apply max-h-[234px] space-y-2 overflow-y-auto overflow-x-hidden;
+  }
+
   .divider {
     @apply relative m-auto mt-2 h-[2px] w-1/2 bg-hcmus-fg;
   }

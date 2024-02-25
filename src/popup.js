@@ -3,6 +3,7 @@ const password = $("#password");
 
 const token = $("#token");
 
+const waitingButton = $(`[role="waitingButton"]`);
 const loginButton = $(`[role="loginButton"]`);
 const editableLog = $(`[role="editableLog"]`);
 
@@ -106,14 +107,26 @@ const saveAction = () => {
 };
 
 function appendToEditableLog(...texts) {
-  texts.forEach((text) =>
-    editableLog.append(
-      `<strong>${new Date().toLocaleString()}</strong> | ${text} <br>`,
-    ),
+  editableLog.prepend(
+    `<p>
+    ${texts
+      .map(
+        (text) =>
+          `<span class="log-time">
+            <strong>${new Date().toLocaleString()}</strong>
+          </span>
+          <br />
+          <span class="log-content">${text}</span>`,
+      )
+      .join("")}
+    </p>`,
   );
 }
 
 async function onLoginButtonClick() {
+  waitingButton.css({ display: "inline-flex" });
+  loginButton.css({ display: "none" });
+
   const res = await fetch(
     `${$("#moodleLink")[0].value}/login/token.php?username=${username.val()}&password=${password.val()}&service=moodle_mobile_app`,
   );
@@ -123,6 +136,9 @@ async function onLoginButtonClick() {
     appendToEditableLog(`Login failed`, `${data}`);
     return;
   }
+
+  loginButton.css({ display: "inline-flex" });
+  waitingButton.css({ display: "none" });
 
   token.val(data.token);
   appendToEditableLog(

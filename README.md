@@ -18,6 +18,7 @@
 
 ### Features
 
+- [x] Light (~180kb), fast and reliable
 - [x] Auto signin to Moodle, Portal sites (if use the same account info)
 - [x] Course page improvements
   - `Course Plit View` feature
@@ -41,8 +42,6 @@
 - [ ] Feat: Pernamently store the logs
 
 - [ ] Style: Tabs layout for watch event (mark, unmark)
-- [ ] Style: Sort logs by time
-- [ ] Style: Add loading spinner for popup signin process
 
 ### Supported sites
 
