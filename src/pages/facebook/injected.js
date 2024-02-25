@@ -313,6 +313,7 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
     link.setAttribute("href", "#");
     link.addEventListener("click", (e) => {
       e.preventDefault();
+      e.stopPropagation();
 
       updateData();
       updatePopup();
@@ -325,6 +326,16 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
     createPopup(cloneElement);
     updateIconState(cloneElement);
 
-    nowTimeUpdate(document.querySelector(`[role="moodle-popup"`));
+    nowTimeUpdate();
+
+    // Close popup on outside click
+    document.addEventListener("click", (e) => {
+      if (e.target.closest(`[role="moodle-popup"]`)) return;
+
+      if (
+        document.querySelector(`[role="moodle-popup"]`).style.display === "block"
+      )
+        link.click();
+    });
   }, 2000);
 });
