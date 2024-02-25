@@ -58,12 +58,12 @@
 
 #### Moodle Page Modifications
 
-|                    | Before                                               | After                                                        |
-| ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ |
-| Navigation Bar     | ![before](public/screenshots/nav-bar.png)            | ![after](public/screenshots/original/nav-bar.png)            |
-| Home Page          | ![before](public/screenshots/home-page.png)          | ![after](public/screenshots/original/home-page.png)          |
-| Courses Page       | ![before](public/screenshots/my-courses-page.png)    | ![after](public/screenshots/original/my-courses-page.png)    |
-| Course Detail Page | ![before](public/screenshots/course-detail-page.png) | ![after](public/screenshots/original/course-detail-page.png) |
+|                    | After                                               | Before                                                        |
+| ------------------ | --------------------------------------------------- | ------------------------------------------------------------- |
+| Navigation Bar     | ![After](public/screenshots/nav-bar.png)            | ![Before](public/screenshots/original/nav-bar.png)            |
+| Home Page          | ![After](public/screenshots/home-page.png)          | ![Before](public/screenshots/original/home-page.png)          |
+| Courses Page       | ![After](public/screenshots/my-courses-page.png)    | ![Before](public/screenshots/original/my-courses-page.png)    |
+| Course Detail Page | ![After](public/screenshots/course-detail-page.png) | ![Before](public/screenshots/original/course-detail-page.png) |
 
 #### Facebook Integration
 
@@ -85,7 +85,9 @@
 
 ##### Step 2: Drag and drop the `GPA Calculator` to the bookmark bar
 
-![GPACalcStep2](public/screenshots/GPACalc/GPACalcStep2.png)
+![GPACalcStep2_1](public/screenshots/GPACalc/gpacalc.png)
+
+![GPACalcStep2_2](public/screenshots/GPACalc/GPACalcStep2.png)
 
 ##### Step 3: Click the `GPA Calculator` bookmarklet
 
@@ -94,6 +96,8 @@
 #### Export Timetable
 
 - Do the same step as `GPA Calculator` but with `Export Timetable` feature.
+
+![Timetable Export](public/screenshots/timetable.png)
 
 ---
 
