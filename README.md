@@ -15,6 +15,8 @@
 ### Release
 
 - [Release](https://github.com/yuran1811/moodify/releases)
+- [Change log](/md/CHANGELOG.md)
+- [Todo](/md/TODO.md)
 
 ### Features
 
@@ -30,24 +32,12 @@
 
 - Watching moodle events on any provided sites
 
-### Todos
-
-- [ ] Feat: Add last-access time for courses and reminds if over 12hrs + Moodle link
-- [ ] Feat: Add `ignore` function for events + watch for the submit status
-- [ ] Feat: Add scrollbar for popup logs
-- [ ] Feat: Add popup options for Moodle page restyle
-- [ ] Feat: Add auto login time input
-- [ ] Feat: Right click to add watch events
-- [ ] Feat: Extend the watch features for other sites
-- [ ] Feat: Pernamently store the logs
-
-- [ ] Style: Tabs layout for watch event (mark, unmark)
-
 ### Supported sites
 
-- https://portal.ctdb.hcmus.edu.vn
-- https://courses.ctda.hcmus.edu.vn
 - https://courses.hcmus.edu.vn
+- https://courses.ctda.hcmus.edu.vn
+- https://portal.ctdb.hcmus.edu.vn
+- https://portal.hcmus.edu.vn/SinhVien.aspx?pid=211
 
 ### Screenshot
 
@@ -78,6 +68,20 @@
 | Empty                                                     | Not Empty                                               |
 | --------------------------------------------------------- | ------------------------------------------------------- |
 | ![Empty](public/screenshots/facebook-integrate-empty.png) | ![Not Empty](public/screenshots/facebook-integrate.png) |
+
+#### GPA Calculator
+
+##### Step 1: Enable `Portal GPA Calculate` feature in extension popup
+
+![GPACalcStep1](public/screenshots/GPACalc/GPACalcStep1.png) |
+
+##### Step 2: Drag and drop the `GPA Calculator` to the bookmark bar
+
+![GPACalcStep2](public/screenshots/GPACalc/GPACalcStep2.png) |
+
+##### Step 3: Click the `GPA Calculator` bookmarklet
+
+![GPACalcStep3](public/screenshots/GPACalc/GPACalcStep3.png) |
 
 ---
 
