@@ -52,6 +52,14 @@
     {
       "matches": ["https://*.facebook.com/*"],
       "js": ["public/static/js/src/pages/facebook/injected.js"]
+    },
+    {
+      "matches": ["https://*.hcmus.edu.vn/SinhVien.aspx?pid=211"],
+      "js": [
+        "public/static/js/jquery.min.js",
+        "public/static/js/src/lib/GPABookmarklet/encoded.js",
+        "public/static/js/src/pages/us-portal/course-results.js"
+      ]
     }
   ]
 }

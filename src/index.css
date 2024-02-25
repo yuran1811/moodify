@@ -67,8 +67,13 @@
     }
   }
 
-  label.is-beta span {
-    @apply relative inline-block after:absolute after:-bottom-1 after:-right-5 after:h-4 after:w-8 after:text-xs after:font-semibold after:text-hcmus-fg after:content-["Beta"];
+  label {
+    &.is-beta span {
+      @apply relative inline-block after:absolute after:-bottom-1 after:left-0 after:h-4 after:w-8 after:text-xs after:font-semibold after:italic after:text-hcmus-fg after:content-["Beta"];
+    }
+    &.is-upcoming span {
+      @apply relative inline-block after:absolute after:-bottom-1 after:left-0 after:h-4 after:w-8 after:text-xs after:font-semibold after:italic after:text-orange-600 after:content-["Upcoming"];
+    }
   }
 }
 

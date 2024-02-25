@@ -117,7 +117,7 @@
       <div class="divider"></div>
       <p class="text-center text-xl font-semibold">Features</p>
       <p class="text-md text-center">Refresh to apply</p>
-      <div class="grid grid-flow-row grid-cols-2">
+      <div class="grid grid-flow-row grid-cols-2 gap-2">
         <label class="flex items-center gap-2">
           <input
             data-collect
@@ -138,7 +138,6 @@
         </label>
         <label class="is-beta flex items-center gap-2">
           <input
-            disabled
             data-collect
             id="portalGPACalculate"
             type="checkbox"
@@ -162,7 +161,17 @@
             type="checkbox"
             class="form-checkbox"
           />
-          <span>Facebook Integrate</span>
+          <span>Facebook Embebbed</span>
+        </label>
+        <label class="is-upcoming flex items-center gap-2">
+          <input
+            disabled
+            data-collect
+            id="embedAllSites"
+            type="checkbox"
+            class="form-checkbox"
+          />
+          <span>Any-site Embedded</span>
         </label>
       </div>
     </main>
