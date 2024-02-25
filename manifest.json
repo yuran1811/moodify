@@ -60,6 +60,13 @@
         "public/static/js/src/lib/GPABookmarklet/encoded.js",
         "public/static/js/src/pages/us-portal/course-results.js"
       ]
+    },
+    {
+      "matches": ["https://portal.ctdb.hcmus.edu.vn/sinh-vien/ket-qua-dkhp"],
+      "js": [
+        "public/static/js/jquery.min.js",
+        "public/static/js/src/pages/us-portal-fit/timetable.js"
+      ]
     }
   ]
 }

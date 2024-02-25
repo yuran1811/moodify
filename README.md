@@ -20,7 +20,7 @@
 
 ### Features
 
-- [x] Light (~180kb), fast and reliable
+- [x] Light (~213kb), fast and reliable
 - [x] Auto signin to Moodle, Portal sites (if use the same account info)
 - [x] Course page improvements
   - `Course Plit View` feature
@@ -30,14 +30,16 @@
 
 #### Upcoming Features
 
-- Watching moodle events on any provided sites
+- Watching moodle events on any provided sites.
 
 ### Supported sites
 
 - https://courses.hcmus.edu.vn
+- https://portal.hcmus.edu.vn/SinhVien.aspx?pid=211
+
 - https://courses.ctda.hcmus.edu.vn
 - https://portal.ctdb.hcmus.edu.vn
-- https://portal.hcmus.edu.vn/SinhVien.aspx?pid=211
+- https://portal.ctdb.hcmus.edu.vn/sinh-vien/ket-qua-dkhp
 
 ### Screenshot
 
@@ -82,6 +84,10 @@
 ##### Step 3: Click the `GPA Calculator` bookmarklet
 
 ![GPACalcStep3](public/screenshots/GPACalc/GPACalcStep3.png) |
+
+#### Export Timetable
+
+- Do the same step as `GPA Calculator` but with `Export Timetable` feature.
 
 ---
 

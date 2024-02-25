@@ -5,6 +5,7 @@
 ### Features
 
 - [x] Feat: Integrate [GPABookmarklet](https://dtrung98.github.io/GPABookmarklet)
+- [x] Feat: Integrate [Export Timetable](https://github.com/beerpiss/hcmus-ctda-calendar)
 - [x] Feat: Add notification badge for moodle icon
 - [x] Feat: Add submit link for tasks
 
