@@ -67,6 +67,12 @@
 
 #### Facebook Integration
 
+- To load events data from Moodle, ensure that you have logged in at [here](https://courses.ctda.hcmus.edu.vn).
+
+> **Info**: Visit the Moodle site frequently to update new events.
+
+> **Note**: The extension will not work if you are not logged in to the Moodle site. The extension will automatically log in to the Moodle site if you have enabled the `Auto Sign In` feature.If you have not enabled the `Auto Sign In` feature, you need to log in to the Moodle site manually to use this feature.
+
 | Empty                                                     | Not Empty                                               |
 | --------------------------------------------------------- | ------------------------------------------------------- |
 | ![Empty](public/screenshots/facebook-integrate-empty.png) | ![Not Empty](public/screenshots/facebook-integrate.png) |
@@ -75,15 +81,15 @@
 
 ##### Step 1: Enable `Portal GPA Calculate` feature in extension popup
 
-![GPACalcStep1](public/screenshots/GPACalc/GPACalcStep1.png) |
+![GPACalcStep1](public/screenshots/GPACalc/GPACalcStep1.png)
 
 ##### Step 2: Drag and drop the `GPA Calculator` to the bookmark bar
 
-![GPACalcStep2](public/screenshots/GPACalc/GPACalcStep2.png) |
+![GPACalcStep2](public/screenshots/GPACalc/GPACalcStep2.png)
 
 ##### Step 3: Click the `GPA Calculator` bookmarklet
 
-![GPACalcStep3](public/screenshots/GPACalc/GPACalcStep3.png) |
+![GPACalcStep3](public/screenshots/GPACalc/GPACalcStep3.png)
 
 #### Export Timetable
 
