@@ -31,7 +31,6 @@
 
 ### Todos
 
-- [ ] Feat: Add submit link for tasks
 - [ ] Feat: Add last-access time for courses and reminds if over 12hrs + Moodle link
 - [ ] Feat: Add `ignore` function for events + watch for the submit status
 - [ ] Feat: Add scrollbar for popup logs
@@ -77,7 +76,9 @@
 
 #### Facebook Integration
 
-![facebook-integrate](public/screenshots/facebook-integrate.png)
+| Empty                                                     | Not Empty                                               |
+| --------------------------------------------------------- | ------------------------------------------------------- |
+| ![Empty](public/screenshots/facebook-integrate-empty.png) | ![Not Empty](public/screenshots/facebook-integrate.png) |
 
 ---
 
