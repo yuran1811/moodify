@@ -130,10 +130,10 @@ chrome.storage.sync.get(["facebookIntegrate"], function ({ facebookIntegrate }) 
       return `
       <li class="moodify-event-item">
         <div class="moodify-event-item-func">
-          <a class="submit-link" href="${item.url}&action=editsubmission">${submitSVG}</a>
+          <a class="submit-link" target="_blank" href="${item.url}&action=editsubmission">${submitSVG}</a>
         </div>
         <div class="moodify-event-item-header">
-          <a href="${item.url}" target="_blank">
+          <a target="_blank" href="${item.url}">
             <p class="moodify-event-item-title">${item.activityname}</p>
           </a>
 
